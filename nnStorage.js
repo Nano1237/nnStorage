@@ -30,7 +30,7 @@
          */
         function StorageFactory($window) {
 
-            var publicStorage = {get: getter, set: setter},
+            var publicStorage = {get: getter, set: setter, remove: remove},
                 privateStorage = isStorageSupported(storageType) ? $window[storageType] : new AlternateStorage();
             return publicStorage;
 
@@ -47,6 +47,10 @@
                 };
                 this.getItem = function (key) {
                     return elements[key];
+                };
+                this.removeItem = function (key) {
+                    delete elements[key];
+                    return undefined;
                 };
             }
 
@@ -89,6 +93,17 @@
 
             /**
              * @description
+             * Removes the item from the localStorage
+             * @methodOf AlternateStorage
+             * @param {string} key the key of the element
+             */
+
+            function remove() {
+                return privateStorage.removeItem(key);
+            }
+
+            /**
+             * @description
              * Sets the passed value to the storage.
              * Values are parsed to strings.
              * @methodOf AlternateStorage
@@ -99,7 +114,7 @@
                 if (angular.isObject(value)) {
                     value = $window.JSON.stringify(value);
                 }
-                privateStorage.setItem(key, value);
+                return privateStorage.setItem(key, value);
             }
 
             /**
