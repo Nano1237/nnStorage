@@ -19,7 +19,7 @@ angular.module('test', [
 ]).run([
     '$nnLocalStorage',
     function ($nnLocalStorage) {
-        console.log($nnLocalStorage.get('test'))
+        console.log($nnLocalStorage.get('test')) //everywhere the same object with the same values
     }
 ]);
 ```
