@@ -4,6 +4,7 @@
   "devDependencies": {
     "angular": "1.4.3",
     "angular-mocks": "1.4.3",
-    "chai": "^2.0.0"
+    "chai": "^2.0.0",
+    "cc-angular-externs":"https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/angular-1.2.js"
   }
 }
