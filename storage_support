@@ -1,7 +1,0 @@
-    flash: Flash 8 persistent storage.
-    gears: Google Gears-based persistent storage.
-    localstorage: HTML5 draft storage.
-    whatwg_db: HTML5 draft database storage.
-    globalstorage: HTML5 draft storage (old spec).
-    ie: Internet Explorer userdata behaviors.
-    cookie: Cookie-based persistent storage.
