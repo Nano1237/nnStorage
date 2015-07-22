@@ -1,10 +1,32 @@
 {
   "name": "nnStorage",
+  "version": "1.0.0",
   "description": "A simple to use persistant Storage Module",
+  "authors": [
+    "Tim Rücker <tim.ruecker@ymail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nano1237/nnStorage.git"
+  },
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "demo",
+    "tests",
+    "nnStorage.extern.js",
+    "Gruntfile.js",
+    ".gitignore"
+  ],
+  "license": "MIT",
+  "main": [
+    "nnStorage.js",
+    "nnStorage.min.js"
+  ],
   "devDependencies": {
     "angular": "1.4.3",
     "angular-mocks": "1.4.3",
     "chai": "^2.0.0",
-    "cc-angular-externs":"https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/angular-1.2.js"
+    "cc-angular-externs": "https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/angular-1.2.js"
   }
 }

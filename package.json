@@ -2,6 +2,7 @@
   "name": "nnStorage",
   "description": "A simple to use persistant Storage Module",
   "author": "Tim Rücker",
+  "version":"1.0.0",
   "main": "build/nnStorage.js",
   "repository": {
     "type": "git",
