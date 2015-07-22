@@ -30,24 +30,59 @@
          */
         function StorageFactory($window) {
 
-            var publicStorage = {get: getter, set: setter, remove: remove},
+            var publicStorage = {
+                    get: getter,
+                    getItem: getter,
+                    set: setter,
+                    setItem: setter,
+                    remove: remove,
+                    removeItem: remove
+                },
                 privateStorage = isStorageSupported(storageType) ? $window[storageType] : new AlternateStorage();
             return publicStorage;
 
             /**
              * @description
-             * This Storage is used if the Browser doesnt supports the local or session storage at the moment.
+             * This Storage is used if the Browser doesn't supports the local or session storage at the moment.
+             * It just saves everything in a local Variable
              * @name AlternateStorage
              * @constructor
              */
             function AlternateStorage() {
                 var elements = {};
+                /**
+                 *
+                 * @description
+                 * Adds or overrides an item from the variable storage
+                 * @name setItem
+                 * @methodOf AlternateStorage
+                 * @param {string} key The index of the variable
+                 * @param {string} value The Value of the variable
+                 */
                 this.setItem = function (key, value) {
                     elements[key] = value;
                 };
+                /**
+                 *
+                 * @description
+                 * Gets an item from the variable storage
+                 * @name getItem
+                 * @methodOf AlternateStorage
+                 * @param {string} key The index of the variable
+                 * @returns {string} Returns the element from the storage
+                 */
                 this.getItem = function (key) {
                     return elements[key];
                 };
+                /**
+                 *
+                 * @description
+                 * Removes an item from the variable storage
+                 * @name removeItem
+                 * @methodOf AlternateStorage
+                 * @param {string} key The index of the variable
+                 * @returns {undefined} Returns undefined, because the variable is gone
+                 */
                 this.removeItem = function (key) {
                     delete elements[key];
                     return undefined;
@@ -94,7 +129,7 @@
             /**
              * @description
              * Removes the item from the localStorage
-             * @methodOf AlternateStorage
+             * @methodOf publicStorage
              * @param {string} key the key of the element
              */
 
@@ -106,7 +141,7 @@
              * @description
              * Sets the passed value to the storage.
              * Values are parsed to strings.
-             * @methodOf AlternateStorage
+             * @methodOf publicStorage
              * @param {string} key the key of the element
              * @param {*} value Any value that could be stored as string
              */
@@ -120,7 +155,7 @@
             /**
              * @description
              * Returns the wanted value
-             * @methodOf AlternateStorage
+             * @methodOf publicStorage
              * @param {string} key the key of the element
              * @returns {*}
              */
