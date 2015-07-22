@@ -1,7 +1,12 @@
-# nnStorage
+# nnStorage 1.0.0
 a pretty lightweight and simple to use localStorage and sessionStorage Module.
 You don't have to worry about Browser support or stringify your objects.
 
+
+#Installation
+to install the package simply run the `bower install nnStorage` command.
+
+#Usage / Example
 
 ```javascript
 angular.module('test', [
