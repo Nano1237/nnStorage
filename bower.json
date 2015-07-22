@@ -1,7 +1,7 @@
 {
   "name": "nnStorage",
-  "version": "1.0.12",
-  "description": "A simple to use persistant Storage Module",
+  "version": "1.0.2",
+  "description": "A simple to use persistent Storage Module",
   "authors": [
     "Tim Rücker <tim.ruecker@ymail.com>"
   ],
@@ -20,8 +20,7 @@
   ],
   "license": "MIT",
   "main": [
-    "nnStorage.js",
-    "nnStorage.min.js"
+    "nnStorage.js"
   ],
   "devDependencies": {
     "angular": "1.4.3",
