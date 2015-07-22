@@ -1,5 +1,5 @@
 # nnStorage 1.0.0
-a pretty lightweight and simple to use localStorage and sessionStorage Module.
+A lightweight and simple to use localStorage and sessionStorage Module.
 You don't have to worry about Browser support or stringify your objects.
 
 
@@ -28,3 +28,7 @@ angular.module('test', [
     }
 ]);
 ```
+
+##Alias Methods
+
+You can also use the `setItem()`, `getItem()` and `removeItem()` Methods instead of `set()`, `get()` and `remove()`
