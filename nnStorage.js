@@ -98,7 +98,7 @@
              * @param {string} key the key of the element
              */
 
-            function remove() {
+            function remove(key) {
                 return privateStorage.removeItem(key);
             }
 
