@@ -1,4 +1,4 @@
-# nnStorage 1.0.0
+# nnStorage 1.0.2
 A lightweight and simple to use localStorage and sessionStorage Module.
 You don't have to worry about Browser support or stringify your objects.
 
